@@ -9,7 +9,17 @@ defmodule Vogel.MixProject do
       version: @version,
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+
+      # docs
+      name: "Vogel"
+      # source_url:
+      # homepage_url:
+      # docs: [
+      #  main: ,
+      #  logo: path,
+      #  extras: [README.md]
+      # ]
     ]
   end
 
@@ -24,7 +34,7 @@ defmodule Vogel.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
+      {:ex_doc, "~> 0.27.0", only: :dev, runtime: false}
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
   end
